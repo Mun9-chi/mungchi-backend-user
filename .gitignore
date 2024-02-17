@@ -1,5 +1,5 @@
 HELP.md
-.gradle
+user/.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -38,3 +38,7 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+
+### LOG ###
+*.log
