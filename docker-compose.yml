@@ -1,0 +1,25 @@
+version: '3.2'
+
+services:
+  app:
+    build:
+      context: ./user
+    volumes:
+      - log-volume:/user/logs
+    ports:
+      - "8080:8080"
+
+  filebeat:
+    build:
+      context: ./filebeat
+    volumes:
+      - log-volume:/var/log/server
+    networks:
+      - elk
+
+networks:
+  elk:
+    external: true
+
+volumes:
+    log-volume:
