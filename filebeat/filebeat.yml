@@ -2,7 +2,7 @@ filebeat.inputs:
   - type: log
     enabled: true
     paths:
-      - /var/log/server/req.log
+      - /var/log/server/app.log
     fields:
       topic: user-log
 
